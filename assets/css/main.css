@@ -43,8 +43,30 @@ header #headerContainer button {
   border-radius: 5px;
   display: none;
   gap: 2px;
+  cursor: pointer;
 }
-
+header #headerContainer button:hover div {
+  display: block;
+}
+header #headerContainer button i {
+  position: relative;
+}
+header #headerContainer button i div {
+  font-size: 10px;
+  position: absolute;
+  list-style: none;
+  margin-top: 9px;
+  margin-left: -12px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: black solid 1px;
+  border-radius: 5px;
+  padding: 9px 8px;
+  display: none;
+  z-index: 1;
+  cursor: pointer;
+}
 @media only screen and (min-width: 576px) and (max-width: 991px) {
   header #headerContainer nav {
     display: none;
@@ -55,18 +77,18 @@ header #headerContainer button {
 }
 @media only screen and (min-width: 300px) and (max-width: 576px) {
   header #headerContainer {
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 9px;
+    padding-bottom: 9px;
   }
   header #headerContainer h1 {
-    font-size: 14px;
+    font-size: 17px;
   }
   header #headerContainer nav {
     display: none;
   }
   header #headerContainer button {
     display: block;
-    padding: 2px 14px;
+    padding: 4px 14px;
     font-size: 10px;
   }
 }
@@ -130,5 +152,258 @@ header #headerContainer button {
   }
   #textSection .startDiv {
     width: 100%;
+  }
+}
+#leadershipSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#leadershipSection .leadershipContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+#leadershipSection .leadershipContainer .lsText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+#leadershipSection .leadershipContainer .lsText h1 {
+  color: black;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+}
+#leadershipSection .leadershipContainer .lsText p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: rgb(154, 151, 151);
+}
+#leadershipSection .leadershipContainer .lsImages {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#leadershipSection .leadershipContainer .lsImages .lsImage {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+#leadershipSection .leadershipContainer .lsImages .lsImage img {
+  width: 50%;
+  border-radius: 50%;
+  padding-bottom: 20px;
+}
+#leadershipSection .leadershipContainer .lsImages .lsImage span {
+  color: rgb(154, 151, 151);
+  text-align: center;
+}
+#leadershipSection .leadershipContainer .lsImages .lsImage p {
+  text-align: center;
+  font-size: 16px;
+  color: rgb(154, 151, 151);
+}
+#leadershipSection .leadershipContainer .lsImages .lsImage div {
+  display: flex;
+  gap: 7px;
+}
+#leadershipSection .leadershipContainer .lsImages .lsImage div i {
+  display: block;
+  background-color: white;
+  color: #FD5F00;
+  font-size: 22px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 780px) {
+  #leadershipSection .leadershipContainer .lsText {
+    gap: 10px;
+  }
+  #leadershipSection .leadershipContainer .lsText h1 {
+    font-size: 25px;
+  }
+  #leadershipSection .leadershipContainer .lsText p {
+    font-size: 12px;
+  }
+  #leadershipSection .leadershipContainer .lsImages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    justify-items: center;
+  }
+  #leadershipSection .leadershipContainer .lsImages .lsImage {
+    width: 70%;
+  }
+  #leadershipSection .leadershipContainer .lsImages .lsImage img {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 576px) {
+  #leadershipSection .leadershipContainer {
+    width: 90%;
+  }
+  #leadershipSection .leadershipContainer .lsText {
+    gap: 8px;
+  }
+  #leadershipSection .leadershipContainer .lsText h1 {
+    font-size: 19px;
+  }
+  #leadershipSection .leadershipContainer .lsText p {
+    font-size: 10px;
+  }
+  #leadershipSection .leadershipContainer .lsImages {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-content: center;
+    justify-items: center;
+  }
+  #leadershipSection .leadershipContainer .lsImages .lsImage {
+    width: 70%;
+  }
+  #leadershipSection .leadershipContainer .lsImages .lsImage img {
+    width: 50%;
+  }
+}
+#blogSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: black solid 1px;
+}
+#blogSection .blogContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+#blogSection .blogContainer .blogText {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#blogSection .blogContainer .blogText h1 {
+  color: black;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+}
+#blogSection .blogContainer .blogText p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: rgb(154, 151, 151);
+}
+#blogSection .blogContainer .blogImages {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+#blogSection .blogContainer .blogImages .blogImage {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: rgb(154, 151, 151);
+}
+#blogSection .blogContainer .blogImages img {
+  cursor: pointer;
+}
+#blogSection .blogContainer .blogImages h1 {
+  color: #FD5F00;
+  font-size: 30px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+#blogSection .blogContainer .blogImages h1:hover {
+  color: #A23131;
+}
+#blogSection .blogContainer .blogImages span {
+  display: flex;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+#blogSection .blogContainer .blogImages span p {
+  color: #FD5F00;
+  cursor: pointer;
+}
+#blogSection .blogContainer .blogImages span p:hover {
+  color: #A23131;
+}
+#blogSection .blogContainer .blogImages h6 {
+  margin-bottom: 50px;
+  color: #FD5F00;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 100;
+  cursor: pointer;
+}
+#blogSection .blogContainer .blogImages h6:hover {
+  color: #A23131;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 800px) {
+  #blogSection {
+    width: 100%;
+  }
+  #blogSection .blogContainer {
+    width: 100%;
+  }
+  #blogSection .blogContainer .blogImages {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #blogSection .blogContainer .blogImages .blogImage {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 576px) {
+  #blogSection .blogContainer .blogText h1 {
+    font-size: 19px;
+  }
+  #blogSection .blogContainer .blogText p {
+    font-size: 12px;
+  }
+  #blogSection .blogContainer .blogImages .blogImage h1 {
+    font-size: 19px;
+  }
+  #blogSection .blogContainer .blogImages .blogImage span {
+    font-size: 12px;
+  }
+  #blogSection .blogContainer .blogImages .blogImage p {
+    font-size: 12px;
+  }
+  #blogSection .blogContainer .blogImages .blogImage h6 {
+    font-size: 14px;
   }
 }
